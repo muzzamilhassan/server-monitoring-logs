@@ -13,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   password: 'muzzamilhassan',
   database: 'test',
   autoLoadEntities: true,
-  synchronize: true,
+  synchronize: true, // Note: set to false in production // synchronize: true will automatically create database tables based on your entities. This is convenient for development but can lead to data loss in production if not used carefully. Always set synchronize to false in production and use migrations to manage database schema changes.
 }), UsersModule],
   controllers: [AppController],
   providers: [AppService],
