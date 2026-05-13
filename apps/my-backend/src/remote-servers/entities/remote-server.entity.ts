@@ -16,7 +16,7 @@ export class RemoteServer {
     name!: string;
 
     @Column()
-    ownerId!: number;
+    ownerId!: string;
 
     @Column({ nullable: true })
     description?: string;
